@@ -1,0 +1,13 @@
+<h1>All Tags</h1>
+
+<ul id='articles'>
+  <% @tags.each do |tag| %>
+    <li>
+      <div style='display: flex; justify-content: space-between;'>
+      <%= link_to tag.name, tag_path(tag), class: 'article_title'%>
+      <%= link_to 'Delete Tag', tag_path(tag), method: :delete, style: 'color: red;', data: { confirm: 'Delete Tag?'} %>
+      </div>
+    </li>
+  <% end %>
+</ul>
+
