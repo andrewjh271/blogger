@@ -1,0 +1,21 @@
+<h1>Login</h1>
+
+<%# form_with will note work with flash w/o `local: true` b/c default setting is remote %>
+<%= form_with url: author_sessions_path, method: 'post', local: true do |form| %>
+  <div class='field'>
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+    <br/>
+  </div>
+  <div clas='field'>
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+    <br/>
+  </div>
+  <div class='actions'>
+    <%= form.submit 'Login' %>
+  </div>
+<% end %>
+
+
+<%= link_to 'Back', articles_path %>
