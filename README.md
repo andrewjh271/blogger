@@ -9,3 +9,8 @@ Mostly some good review of basic Rails concepts. I also learned about the `paper
 I wasn't particuarly happy with the final functionality of authentication, but I've hardcoded more natural functionality in previous projects, and don't expect to be using the `sorcery` gem in the future.
 
 I was unable to figure out how to push my `sqlite3` development database into the `postgresql` production database. I expect I will use `postgresql` for development going forward.
+
+###### A note on node_modules
+
+In an effort to remove much of the bloated and unused `node_modules` folder, I deleted  `"@rails/actioncable": "^6.0.0"`, `"@rails/webpacker": "4.3.0"` and `"turbolinks": "^5.2.0"` from the list of `"dependencies"` and `"webpack-dev-server": "^3.11.0"`from the list of `"devDependencies"` in `package.json`, then ran `$ yarn install` again. I explain more about this process in the README of my [re-former project](https://github.com/andrewjh271/re-former).
+
